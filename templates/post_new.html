@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>New post</h1>
+<form action="" method="post">{% csrf_token %}
+    <!-- protect our form from cross-site request forgery. should use it for all your Django forms -->
+    
+    {{ form.as_p }} <!-- renders the specified fields within paragraph <p> tags -->
+    <input type="submit" value="Save">
+</form>
+
+{% endblock content %}
